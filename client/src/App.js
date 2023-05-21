@@ -8,8 +8,9 @@ import SideNav from "./Utilities/SideNav";
 import NotFound from "./Utilities/NotFound";
 import Buffer from "./Utilities/Buffer";
 import Home from "./Components/Home";
-import VoiceActor from "./Components/VoiceActor";
-import Writer from "./Components/Writer";
+import ProjectLinks from "./Components/ProjectLinks";
+import VoiceActor from "./Components/VoiceActor/VoiceActor";
+import Writer from "./Components/Writer/Writer";
 
 function App() {
   return (
@@ -22,14 +23,25 @@ function App() {
               <SideNav />
             </FullHeight>
           </Col>
-          <Col>
+          <Col className="d-none d-md-block" md={1}></Col>
+          <Col md={6}>
+            <Row>
+              <Col md={{ span: 10, offset: 1 }}>
+              <Buffer />
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/va" element={<VoiceActor />} />
+                  <Route path="/writer" element={<Writer />} />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              <Buffer />
+              </Col>
+            </Row>
+          </Col>
+          <Col className="d-none d-md-block" md={1}></Col>
+          <Col md={2} xxl={3}>
             <Buffer />
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/va" element={<VoiceActor />} />
-                <Route path="/writer" element={<Writer />} />
-                <Route path="*" element={<NotFound />} />
-              </Routes>
+              <ProjectLinks />
             <Buffer />
           </Col>
         </Row>

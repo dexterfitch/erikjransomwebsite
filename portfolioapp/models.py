@@ -11,7 +11,7 @@ class CreditsCategory(models.Model):
     name = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.name
+        return self.name + " (Category #" + str(self.pk) + ")"
 
 class Credit(models.Model):
     title = models.CharField(max_length=200)
@@ -58,7 +58,7 @@ class EquipmentTech(models.Model):
     name = models.CharField(max_length=200)
 
     def __str__(self):
-        return self.name
+        return self.name + " (EquipmentTech #" + str(self.pk) + ")"
 
 class Equipment(models.Model):
     name = models.CharField(max_length=200)

@@ -1,9 +1,9 @@
 function WriterMainBody() {
   return (
     <>
-      <p className="mt-4">
-        Erik Ransom is an award-winning, internationally-produced playwright,
-        composer, lyricist, epicist, actor and voiceover artist. Erik wrote both
+      <p className="display-6">Erik Ransom is an award-winning, internationally-produced playwright,
+        composer, lyricist, epicist, actor and voiceover artist.</p>
+      <p className="mt-4">Erik wrote both
         music and libretto for his risqu&eacute; opus&nbsp;
         <span className="erik-work">
           &ldquo;<em>GRINDR The Opera</em>&rdquo;

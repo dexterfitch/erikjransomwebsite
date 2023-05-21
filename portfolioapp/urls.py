@@ -4,6 +4,11 @@ from . import views
 urlpatterns = [
     path('links/', views.get_all_links),
     path('credits/', views.get_all_credits),
+    path('credits/readingsconcerts/', views.get_readingsconcerts_credits),
+    path('credits/fullproductions/', views.get_fullproductions_credits),
+    path('credits/playsmusicals/', views.get_playsmusicals_credits),
+    path('credits/filmtelevision/', views.get_filmtelevision_credits),
+    path('credits/voiceover/', views.get_voiceover_credits),
     path('services/', views.get_all_services),
     path('experiences/', views.get_all_experiences),
     path('dialects/', views.get_all_dialects),

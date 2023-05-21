@@ -3,14 +3,39 @@ from django.http import HttpResponse
 from .models import *
 
 def get_all_links(request):
-    all_links = Link.objects.all()
+    all_links = Link.objects.order_by("text")
     all_links_json = serialize('json', all_links)
     return HttpResponse(all_links_json)
 
 def get_all_credits(request):
-    all_credits = Credit.objects.all()
+    all_credits = Credit.objects.order_by("title")
     all_credits_json = serialize('json', all_credits)
     return HttpResponse(all_credits_json)
+
+def get_readingsconcerts_credits(request):
+    readingsconcerts = Credit.objects.filter(category=5).order_by("title")
+    readingsconcerts_json = serialize('json', readingsconcerts)
+    return HttpResponse(readingsconcerts_json)
+
+def get_fullproductions_credits(request):
+    fullproductions = Credit.objects.filter(category=4).order_by("title")
+    fullproductions_json = serialize('json', fullproductions)
+    return HttpResponse(fullproductions_json)
+
+def get_playsmusicals_credits(request):
+    playsmusicals = Credit.objects.filter(category=3).order_by("title")
+    playsmusicals_json = serialize('json', playsmusicals)
+    return HttpResponse(playsmusicals_json)
+
+def get_filmtelevision_credits(request):
+    filmtelevision = Credit.objects.filter(category=2).order_by("title")
+    filmtelevision_json = serialize('json', filmtelevision)
+    return HttpResponse(filmtelevision_json)
+
+def get_voiceover_credits(request):
+    voiceover = Credit.objects.filter(category=1).order_by("title")
+    voiceover_json = serialize('json', voiceover)
+    return HttpResponse(voiceover_json)
 
 def get_all_services(request):
     all_services = Service.objects.all()
@@ -23,7 +48,7 @@ def get_all_experiences(request):
     return HttpResponse(all_experiences_json)
 
 def get_all_dialects(request):
-    all_dialects = Dialect.objects.all()
+    all_dialects = Dialect.objects.order_by("name")
     all_dialects_json = serialize('json', all_dialects)
     return HttpResponse(all_dialects_json)
 
