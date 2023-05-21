@@ -1,0 +1,22 @@
+/* PALETTE */
+$penn-red: #9c0207ff;
+$gold-metallic: #e0b92eff;
+$aquamarine: #54e39eff;
+$battleship-gray: #7e7f76ff;
+$polynesian-blue: #084787ff;
+$tyrian-purple: #610f42ff;
+$seashell: #fff2ebff;
+$smoky-black: #090901ff;
+
+$theme-colors: (
+    "primary": $penn-red, 
+    "secondary": $gold-metallic,
+    "success": $aquamarine,
+    "info": $battleship-gray, 
+    "warning": $polynesian-blue, 
+    "danger": $tyrian-purple, 
+    "light": $seashell, 
+    "dark": $smoky-black
+);
+  
+@import "../node_modules/bootstrap/scss/bootstrap";
