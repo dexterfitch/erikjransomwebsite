@@ -22,7 +22,7 @@ function WriterMainBody() {
           &rdquo;
         </span>
         &nbsp; which was produced at The Prince Music Theatre in Philadelphia
-        &amp; Theatre 80 in NYC),&nbsp;
+        &amp; Theatre 80 in NYC,&nbsp;
         <span className="erik-work">
           &ldquo;<em>More Than All the World</em>&rdquo;
         </span>
@@ -98,7 +98,7 @@ function WriterMainBody() {
       </p>
       <p className="mt-4">
         To keep up with more of Erik&rsquo;s latest exploits, follow him on
-        social media [TODO: INSERT LINKS] and visit&nbsp;
+        social media and visit&nbsp;
         <a
           href="http://www.iconoclasttheatrecollective.com"
           target="_blank"

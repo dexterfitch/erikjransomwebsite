@@ -2,7 +2,6 @@ import { Routes, Route } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import FullHeight from "react-full-height";
 import TopNav from "./Utilities/TopNav";
 import SideNav from "./Utilities/SideNav";
 import NotFound from "./Utilities/NotFound";
@@ -14,39 +13,35 @@ import Writer from "./Components/Writer/Writer";
 
 function App() {
   return (
-    <>
-      <TopNav />
-      <Container fluid>
-        <Row>
-          <Col className="d-none d-md-block" id="side-nav-container" md={2} xxl={1}>
-            <FullHeight id="side-nav-section">
-              <SideNav />
-            </FullHeight>
-          </Col>
-          <Col className="d-none d-md-block" md={1}></Col>
-          <Col md={6}>
-            <Row>
-              <Col md={{ span: 10, offset: 1 }}>
-              <Buffer />
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/va" element={<VoiceActor />} />
-                  <Route path="/writer" element={<Writer />} />
-                  <Route path="*" element={<NotFound />} />
-                </Routes>
-              <Buffer />
-              </Col>
-            </Row>
-          </Col>
-          <Col className="d-none d-md-block" md={1}></Col>
-          <Col md={2} xxl={3}>
-            <Buffer />
-              <ProjectLinks />
-            <Buffer />
-          </Col>
-        </Row>
-      </Container>
-    </>
+    <Container fluid p-0>
+      <TopNav /> 
+      <Row id="main">
+        <Col className="d-none d-lg-block" id="side-nav-container" lg={2}>
+          <div id="side-nav-section">
+            <SideNav />
+          </div>
+        </Col>
+        <Col lg={7} id="main-middle">
+          <Buffer />
+          <Row>
+            <Col lg={{ span: 10, offset: 1 }}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/va" element={<VoiceActor />} />
+                <Route path="/writer" element={<Writer />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Col>
+          </Row>
+          <Buffer />
+        </Col>
+        <Col id="projects-container" lg={3}>
+          <div id="projects-section">
+            <ProjectLinks />
+          </div>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

@@ -27,10 +27,3 @@ urlpatterns = [
     path('credits_by_category/<int:category_id>/', views.get_credits_by_category),
     path('equipments_by_equipment_tech/<int:equipment_tech_id>/', views.get_equipments_by_equipment_tech),
 ]
-
-
-
-
-
-
-

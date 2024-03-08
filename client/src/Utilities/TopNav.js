@@ -5,17 +5,20 @@ import NavLinks from "./NavLinks";
 
 function TopNav() {
   return (
-    <Navbar className="d-block d-md-none" bg="dark">
-      <Container fluid>
-        <Navbar.Brand href="/">Erik J Ransom | Portfolio</Navbar.Brand>
-        <Navbar.Toggle aria-controls="main-nav" />
-        <Navbar.Collapse id="main-nav">
-          <Nav className="me-auto">
-            <NavLinks />
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <div id="top-nav-container">
+      <h1 className="d-none d-lg-block" id="home-brand">Erik J Ransom</h1>
+      <Navbar className="d-block d-lg-none" bg="dark">
+        <Container fluid>
+          <Navbar.Brand href="/">Erik J Ransom | Portfolio</Navbar.Brand>
+          <Navbar.Toggle aria-controls="main-nav" />
+          <Navbar.Collapse id="main-nav">
+            <Nav className="me-auto">
+              <NavLinks />
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </div>
   );
 }
 
